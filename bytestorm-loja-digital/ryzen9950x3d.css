@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #121018;
+    color: #e9e6ff;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #2a1740;
+    border-bottom: 3px solid #7b2cbf;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+header p {
+    color: #cbb8ff;
+    font-size: 17px;
+}
+
+.produto {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 35px;
+    background: #1b1526;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    animation: aparecer 0.7s ease;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #b47cff;
+    border-left: 4px solid #7b2cbf;
+    padding-left: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.especificacoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.item {
+    background: #241a33;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #35224d;
+    transition: all 0.25s ease;
+}
+
+.item:hover {
+    transform: translateY(-4px);
+    border-color: #7b2cbf;
+    box-shadow: 0 6px 20px rgba(123, 44, 191, 0.35);
+}
+
+.label {
+    font-size: 14px;
+    color: #bda6ff;
+    margin-bottom: 5px;
+}
+
+.value {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.produto a {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 22px;
+    background: #7b2cbf;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    border: 1px solid #9d4edd;
+    transition: all 0.25s ease;
+}
+
+.produto a:hover {
+    background: #9d4edd;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(123, 44, 191, 0.45);
+}
+
+.produto a:active {
+    transform: scale(0.96);
+}
+
+#botao-loja {
+    margin-left: 0.5%;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: #2a1740;
+    color: #cbb8ff;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

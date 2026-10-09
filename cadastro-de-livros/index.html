@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Estante — Cadastro de Livros</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="pagina">
+
+    <header class="cabecalho">
+      <h1>Minha estante</h1>
+      <p>Guarde aqui os livros que você já leu, está lendo ou ainda quer ler.</p>
+    </header>
+
+    <section class="cartao-formulario">
+
+      <div class="campos">
+
+        <div class="campo">
+          <span class="icone" aria-hidden="true">
+            <img src="midias/icone-titulo.png" alt="">
+          </span>
+          <input type="text" id="campoTitulo" placeholder="Título do livro">
+        </div>
+
+        <div class="campo">
+          <span class="icone" aria-hidden="true">
+            <img src="midias/icone-autor.png" alt="">
+          </span>
+          <input type="text" id="campoAutor" placeholder="Autor do livro">
+        </div>
+
+        <div class="campo">
+          <span class="icone" aria-hidden="true">
+            <img src="midias/icone-capa.png" alt="">
+          </span>
+          <input type="text" id="campoCapa" placeholder="URL da capa do livro">
+        </div>
+
+      </div>
+
+      <button id="botaoAdicionar" class="botao-adicionar" title="Cadastrar livro" aria-label="Cadastrar livro">+</button>
+
+    </section>
+
+    <p id="mensagemErro" class="mensagem-erro" role="alert"></p>
+
+    <section id="listaLivros" class="lista-livros"></section>
+
+    <p id="estadoVazio" class="estado-vazio">Sua estante ainda está vazia. Cadastre o primeiro livro ali em cima.</p>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#1a1400;
+    color:#fffde0;
+    line-height:1.6;
+}
+
+header{
+    text-align:center;
+    padding:40px 20px;
+    background:#3b2d00;
+    border-bottom:3px solid #f7e55c;
+    box-shadow:0 5px 20px rgba(0,0,0,0.5);
+}
+
+header h1{
+    font-size:38px;
+    margin-bottom:10px;
+    letter-spacing:1px;
+}
+
+header p{
+    color:#fff8a5;
+    font-size:17px;
+}
+
+.produto{
+    max-width:1000px;
+    margin:40px auto;
+    padding:35px;
+    background:#322900;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
+    animation:aparecer 0.7s ease;
+}
+
+h2{
+    margin-top:30px;
+    margin-bottom:15px;
+    color:#fff57c;
+    border-left:4px solid #f7e55c;
+    padding-left:10px;
+}
+
+p{
+    margin-bottom:15px;
+}
+
+.especificacoes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+    margin-top:15px;
+}
+
+.item{
+    background:#3a2f00;
+    padding:15px;
+    border-radius:8px;
+    border:1px solid #4d3f00;
+    transition:all 0.25s ease;
+}
+
+.item:hover{
+    transform:translateY(-4px);
+    border-color:#f7e55c;
+    box-shadow:0 6px 20px rgba(247,229,92,0.35);
+}
+
+.label{
+    font-size:14px;
+    color:#fff9b3;
+    margin-bottom:5px;
+}
+
+.value{
+    font-size:18px;
+    font-weight:bold;
+    color:#ffffff;
+}
+
+.botao-voltar{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 22px;
+    background:#f7e55c;
+    color:#3b2d00;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
+    letter-spacing:0.5px;
+    border:1px solid #fff57c;
+    transition:all 0.25s ease;
+}
+
+.botao-voltar:hover{
+    background:#fff57c;
+    transform:translateY(-2px);
+    box-shadow:0 6px 18px rgba(255,245,124,0.45);
+}
+
+.botao-voltar:active{
+    transform:scale(0.96);
+}
+
+#botao-loja {
+    margin-left: 0.5%   ;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+    background:#3b2d00;
+    color:#fff8a5;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}

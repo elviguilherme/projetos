@@ -1,0 +1,251 @@
+:root {
+  --cor-fundo: #ece5d4;
+  --cor-cartao: #fffcf6;
+  --cor-texto: #2b2620;
+  --cor-texto-suave: #746b5c;
+  --cor-borda: #ddd2b8;
+  --cor-primaria: #2f5d4e;
+  --cor-primaria-escura: #21453a;
+  --cor-alerta: #a8453a;
+  --cor-alerta-fundo: #f6e4e1;
+
+  --fonte-titulo: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --fonte-corpo: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 20px 80px;
+  background: var(--cor-fundo);
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(43, 38, 32, 0.05) 1px, transparent 0);
+  background-size: 22px 22px;
+  color: var(--cor-texto);
+  font-family: var(--fonte-corpo);
+  -webkit-font-smoothing: antialiased;
+}
+
+.pagina {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.cabecalho {
+  margin-bottom: 28px;
+}
+
+.cabecalho h1 {
+  font-family: var(--fonte-titulo);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2.1rem;
+  margin: 0 0 6px;
+}
+
+.cabecalho p {
+  margin: 0;
+  color: var(--cor-texto-suave);
+  font-size: 0.95rem;
+}
+
+.cartao-formulario {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+  background: var(--cor-cartao);
+  border: 1px solid var(--cor-borda);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 1px 2px rgba(43, 38, 32, 0.06);
+}
+
+.campos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.campo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+  padding: 0 12px;
+  background: #fffefb;
+}
+
+.campo:focus-within {
+  border-color: var(--cor-primaria);
+}
+
+.icone {
+  color: var(--cor-texto-suave);
+  display: flex;
+  flex-shrink: 0;
+}
+
+.icone img {
+  width: 18px;
+  height: 18px;
+  display: block;
+  object-fit: contain;
+}
+
+.campo input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 11px 0;
+  font-family: var(--fonte-corpo);
+  font-size: 0.95rem;
+  color: var(--cor-texto);
+}
+
+.campo input::placeholder {
+  color: #a49b8a;
+}
+
+.botao-adicionar {
+  flex-shrink: 0;
+  width: 52px;
+  border: none;
+  border-radius: 14px;
+  background: var(--cor-primaria);
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.botao-adicionar:hover {
+  background: var(--cor-primaria-escura);
+}
+
+.botao-adicionar:active {
+  transform: scale(0.97);
+}
+
+.mensagem-erro {
+  min-height: 20px;
+  margin: 14px 2px 0;
+  color: var(--cor-alerta);
+  font-size: 0.88rem;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.mensagem-erro.visivel {
+  opacity: 1;
+  background: var(--cor-alerta-fundo);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.lista-livros {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.livro {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--cor-cartao);
+  border: 1px solid var(--cor-borda);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+.livro-capa {
+  width: 52px;
+  height: 68px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--cor-borda);
+  flex-shrink: 0;
+  background: #e4dcc8;
+}
+
+.livro-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.livro-titulo {
+  margin: 0 0 3px;
+  font-family: var(--fonte-titulo);
+  font-size: 1.05rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.livro-autor {
+  margin: 0;
+  color: var(--cor-texto-suave);
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.botao-remover {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e7cfc9;
+  border-radius: 9px;
+  background: #fdf6f4;
+  color: var(--cor-alerta);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.botao-remover:hover {
+  background: var(--cor-alerta-fundo);
+}
+
+.botao-remover img {
+  width: 16px;
+  height: 16px;
+  display: block;
+  object-fit: contain;
+}
+
+.estado-vazio {
+  margin-top: 20px;
+  text-align: center;
+  color: var(--cor-texto-suave);
+  font-size: 0.9rem;
+  padding: 26px 16px;
+  border: 1px dashed var(--cor-borda);
+  border-radius: 14px;
+}
+
+.lista-livros:not(:empty) + .estado-vazio {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .cartao-formulario {
+    flex-direction: column;
+  }
+
+  .botao-adicionar {
+    width: 100%;
+    padding: 10px 0;
+  }
+}

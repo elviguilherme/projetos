@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0f1718;
+    color: #e6feff;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #12363a;
+    border-bottom: 3px solid #4de1e8;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #a7f4f7;
+}
+
+.produto {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 35px;
+    background: #16282b;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    animation: aparecer 0.7s ease;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #63f3ff;
+    border-left: 4px solid #4de1e8;
+    padding-left: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.especificacoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.item {
+    background: #1b3336;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #2a4c50;
+    transition: all 0.25s ease;
+}
+
+.item:hover {
+    transform: translateY(-4px);
+    border-color: #4de1e8;
+    box-shadow: 0 6px 20px rgba(77, 225, 232, 0.35);
+}
+
+.label {
+    font-size: 14px;
+    color: #9beaed;
+    margin-bottom: 5px;
+}
+
+.value {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.botao-voltar {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 22px;
+    background: #4de1e8;
+    color: #052426;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+}
+
+.botao-voltar:hover {
+    background: #7af6ff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(77, 225, 232, 0.45);
+}
+
+.botao-voltar:active {
+    transform: scale(0.96);
+}
+
+#botao-loja {
+    margin-left: 0.5%;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: #12363a;
+    color: #a7f4f7;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

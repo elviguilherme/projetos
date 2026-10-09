@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #181010;
+    color: #ffecec;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #3a1414;
+    border-bottom: 3px solid #ff5a5a;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #ffb3b3;
+}
+
+.produto {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 35px;
+    background: #241515;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    animation: aparecer 0.7s ease;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #ff7a7a;
+    border-left: 4px solid #ff5a5a;
+    padding-left: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.especificacoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.item {
+    background: #2d1b1b;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #4a2a2a;
+    transition: all 0.25s ease;
+}
+
+.item:hover {
+    transform: translateY(-4px);
+    border-color: #ff5a5a;
+    box-shadow: 0 6px 20px rgba(255, 90, 90, 0.35);
+}
+
+.label {
+    font-size: 14px;
+    color: #ffb0b0;
+    margin-bottom: 5px;
+}
+
+.value {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.botao-voltar {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 22px;
+    background: #ff5a5a;
+    color: #2b0000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+}
+
+.botao-voltar:hover {
+    background: #ff7a7a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(255, 90, 90, 0.45);
+}
+
+.botao-voltar:active {
+    transform: scale(0.96);
+}
+
+#botao-loja {
+    margin-left: 0.5%;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: #3a1414;
+    color: #ffb3b3;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
